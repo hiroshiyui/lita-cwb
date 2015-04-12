@@ -15,14 +15,14 @@ module Lita
             uri = nil
         end
 
-        Nokogiri::XML(open(uri)) do |doc|
-          response.reply doc.inspect
-          response.reply doc.css("dataset location locationName").text
+        data = Nokogiri::XML(open(uri)) unless uri.nil?
+        unless data.nil?
+          response.reply data.css("dataset location locationName").text
 
-          doc.css("dataset parameterSet parameter").each do |params|
+          data.css("dataset parameterSet parameter").each do |params|
             response.reply params.css("parameterValue").text
           end
-        end unless uri.nil?
+        end
       end
     end
 
