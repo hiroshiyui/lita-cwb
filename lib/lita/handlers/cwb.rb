@@ -18,9 +18,9 @@ module Lita
         
         response.reply data.css("dataset location locationName").text
 
-        #data.css("dataset parameterSet parameter").each do |params|
-          #response.reply params.css("parameterValue").text
-        #end
+        data.css("dataset parameterSet parameter").each do |params|
+          response.reply params.css("parameterValue").text
+        end
       end
     end
 
