@@ -15,7 +15,7 @@ module Lita
             uri = nil
         end
 
-        data = Nokogiri::XML(open(uri)) do |doc|
+        Nokogiri::XML(open(uri)) do |doc|
           response.reply doc.inspect
           response.reply doc.css("dataset location locationName").text
 
