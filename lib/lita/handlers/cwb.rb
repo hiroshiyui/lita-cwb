@@ -12,16 +12,14 @@ module Lita
           when "台北市"
             uri = "http://opendata.cwb.gov.tw/opendata/MFC/F-C0032-009.xml"
           else
-            uri = nil
+            response.reply t "No weather information for location #{where}"
+            return
         end
 
-        data = Nokogiri::XML(open(uri)) unless uri.nil?
-        unless data.nil?
-          response.reply data.css("dataset location locationName").text
-
-          data.css("dataset parameterSet parameter").each do |params|
-            response.reply params.css("parameterValue").text
-          end
+        data = Nokogiri::XML(open(uri))
+        response.reply data.css("dataset location locationName").text
+        data.css("dataset parameterSet parameter").each do |params|
+          response.reply params.css("parameterValue").text
         end
       end
     end
