@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["hiroshi@ghostsinthelab.org"]
   spec.description   = "Lita handler with Open Data from Central Weather Bureau"
   spec.summary       = "Lita handler with Open Data from Central Weather Bureau, get forecasts information from CWB."
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/hiroshiyui/lita-cwb"
   spec.license       = "MPL-2.0"
   spec.metadata      = { "lita_plugin_type" => "handler" }
 
