@@ -1,6 +1,6 @@
 # lita-cwb
 
-TODO: Add a description of the plugin.
+*lita-cwb* is a Lita handler with Open Data from Central Weather Bureau (中央氣象局)
 
 ## Installation
 
@@ -16,4 +16,4 @@ TODO: Describe any configuration attributes the plugin exposes.
 
 ## Usage
 
-TODO: Describe the plugin's features and how to use them.
+* lita> `cwb f [WHERE]` - Show me forecast information for location WHERE (e.g: '台北市')
