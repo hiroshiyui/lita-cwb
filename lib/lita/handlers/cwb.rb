@@ -4,12 +4,7 @@ require 'nokogiri'
 module Lita
   module Handlers
     class Cwb < Handler
-      route(/^cwb\s+hello/, :hello, command: true, help: { "cwb hello" => "prints 'hello world' from lita-cwb." })
-      route(/^cwb\s+f\s+(.*)/, :f, command: true, help: { "cwb f [WHERE]" => "Show me forecast information." })
-
-      def hello(response)
-        response.reply("Hello world!")
-      end
+      route(/^cwb\s+f(.*)/, :f, command: true, help: { "cwb f [WHERE]" => "Show me forecast information." })
 
       def f(response)
         where = response.matches.first.first
