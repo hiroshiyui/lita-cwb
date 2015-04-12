@@ -14,13 +14,13 @@ module Lita
       def f(response)
         where = response.matches.first.first
         uri = "http://opendata.cwb.gov.tw/opendata/MFC/F-C0032-009.xml"
-        data = Nokogiri::XML(open(uri)) do |doc|
-          response.reply doc.css("dataset location locationName").text
+        data = Nokogiri::XML(open(uri))
+        
+        response.reply data.css("dataset location locationName").text
 
-          doc.css("dataset parameterSet parameter").each do |params|
-            response.reply params.css("parameterValue").text
-          end
-        end
+        #data.css("dataset parameterSet parameter").each do |params|
+          #response.reply params.css("parameterValue").text
+        #end
       end
     end
 
