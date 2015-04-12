@@ -2,3 +2,4 @@ en:
   lita:
     handlers:
       cwb:
+        not_match_location: "No weather information for #{where}"

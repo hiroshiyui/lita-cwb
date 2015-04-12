@@ -12,7 +12,7 @@ module Lita
           when "台北市"
             uri = "http://opendata.cwb.gov.tw/opendata/MFC/F-C0032-009.xml"
           else
-            response.reply t "No weather information for location #{where}"
+            response.reply t('not_match_location', {:where => where})
             return
         end
 
