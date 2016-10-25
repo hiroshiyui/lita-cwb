@@ -16,4 +16,4 @@ TODO: Describe any configuration attributes the plugin exposes.
 
 ## Usage
 
-* lita> `cwb f [WHERE]` - Show me forecast information for location WHERE (e.g: '台北市')
+* lita> `cwb [WHERE]` - Show me forecast information for location WHERE (e.g: '台北市')
