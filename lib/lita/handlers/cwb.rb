@@ -66,9 +66,7 @@ module Lita
         end
 
         response.reply data.css("dataset location locationName").text
-        data.css("dataset parameterSet parameter").each do |param|
-          response.reply param.css("parameterValue").text
-        end
+        response.reply data.css("dataset parameterSet parameter parameterValue").collect {|v| v.text}.join("\n\n")
       end
     end
 
