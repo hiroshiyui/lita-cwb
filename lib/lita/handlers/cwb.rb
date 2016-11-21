@@ -64,9 +64,9 @@ module Lita
         data = Nokogiri::XML(open(uri)) do |config|
           config.strict.noblanks
         end
-
-        response.reply data.css("dataset location locationName").text
-        response.reply data.css("dataset parameterSet parameter parameterValue").collect {|v| v.text}.join("\n\n")
+        
+        response.reply [data.css("dataset location locationName").text, data.css("dataset parameterSet parameter parameterValue").collect {|v| v.text}.join("\n\n")]
+        
       end
     end
 
