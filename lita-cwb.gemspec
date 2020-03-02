@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-cwb"
-  spec.version       = "0.1.4"
+  spec.version       = "0.1.5"
   spec.authors       = ["Huei-Horng Yo"]
   spec.email         = ["hiroshi@ghostsinthelab.org"]
   spec.description   = "Lita handler with Open Data from Central Weather Bureau"
